@@ -1,33 +1,42 @@
-function add(){
+document.getElementById("add").addEventListener('click',function() {
     const number1 = parseFloat(document.getElementById('number1').value) || 0;
     const number2 = parseFloat(document.getElementById('number2').value) || 0;
-    result=number1+number2;
-    document.getElementById('calculation-result').textContent = result;
+    const result = add(number1, number2);;
+    document.getElementById('calculation-result').textContent = result;});
 
-}
-
-function subtract(){
+document.getElementById("subtract").addEventListener('click',function() {
     const number1 = parseFloat(document.getElementById('number1').value) || 0;
     const number2 = parseFloat(document.getElementById('number2').value) || 0;
-    result = number1 - number2;
-    document.getElementById('calculation-result').textContent = result;
-}
+    const result = subtract(number1, number2);;
+    document.getElementById('calculation-result').textContent = result;});
 
-function divide(){
+document.getElementById("divide").addEventListener('click',function() {
     const number1 = parseFloat(document.getElementById('number1').value) || 0;
     const number2 = parseFloat(document.getElementById('number2').value) || 0;
-    result = number1 / number2;
-    document.getElementById('calculation-result').textContent = result;
-}
+    const result = divide(number1, number2);;
+    document.getElementById('calculation-result').textContent = result;});
 
-function multiply(){
+document.getElementById("multiply").addEventListener('click',function() {
     const number1 = parseFloat(document.getElementById('number1').value) || 0;
     const number2 = parseFloat(document.getElementById('number2').value) || 0;
-    result = number1 * number2;
-    document.getElementById('calculation-result').textContent = result;
+    const result = multiply(number1, number2);;
+    document.getElementById('calculation-result').textContent = result;});
+
+
+
+
+function add(number1,number2){
+    return number1 + number2
 }
 
-document.getElementById("add").addEventListener('click',add);
-document.getElementById("subtract").addEventListener('click',subtract);
-document.getElementById("divide").addEventListener('click',divide);
-document.getElementById("multiply").addEventListener('click',multiply);
+function subtract(number1,number2){
+    return number1 - number2
+}
+
+function divide(number1,number2){
+    return number1 / number2
+}
+
+function multiply(number1,number2){
+    return number1 * number2
+}
